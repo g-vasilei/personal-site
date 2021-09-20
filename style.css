@@ -1,0 +1,1086 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&family=Ubuntu:wght@400;500;700&display=swap");
+
+/* color: rgba(189, 189, 189, 1); 
+   background-color#fcfcfc;
+   #A6A6A6 65%
+*/
+
+:root {
+   --clr-crimson: #6e57e0;
+   --clr-crimson2: #573ddb;
+   --clr-white: #fffffa;
+   --clr-grey: #647282b3;
+   --clr-light-blue: #f1f9fb;
+   --clr-sections: #fcfcfc;
+
+   --clr-middle-color: #a24c55;
+
+   --clr-nav-card: hsl(212, 13%, 18%);
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   text-decoration: none;
+}
+
+html {
+   font-size: 62.5%;
+   scroll-behavior: smooth;
+   background-color: #fffffa;
+}
+
+h2 {
+   font-size: 20rem;
+}
+
+h5 {
+   font-size: 4rem;
+}
+
+section footer a {
+   font-family: "Ubuntu", sans-serif;
+}
+
+a {
+   text-decoration: none !important;
+}
+
+/* custom scroll bar */
+
+::-webkit-scrollbar {
+   width: 10px;
+}
+::-webkit-scrollbar-track {
+   background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+   background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+   background: #555;
+}
+footer .max-width i {
+   color: var(--clr-crimson);
+   font-size: 3rem;
+}
+
+/* idios kwdikas*/
+section .title {
+   position: relative;
+   text-align: center;
+   font-size: 6rem;
+   font-weight: 500;
+   margin-bottom: 4rem;
+   padding-bottom: 4rem;
+   font-family: "Ubuntu", sans-serif;
+   color: var(--clr-nav-card);
+}
+
+.max-width {
+   max-width: 1200px;
+   padding: 2.5rem 0rem;
+   margin: auto;
+}
+
+/* logo */
+
+.divv-logo {
+   width: 35%;
+}
+.divv-logo img {
+   width: 10%;
+   padding: 0;
+}
+
+/* nav-style */
+
+.nav-bar {
+   font-family: "Ubuntu", sans-serif;
+   width: 100%;
+   min-height: 10vh;
+   position: fixed;
+   transition: all 0.7s ease-in-out;
+   z-index: 999;
+}
+
+.nav-bar .ul-menu li a {
+   color: var(--clr-nav-card);
+   font-size: 1.9rem !important;
+   margin-left: 4rem;
+   transition: color 0.3s ease;
+   display: block;
+   font-weight: 700;
+   position: relative;
+}
+
+.nav-bar .divv-logo {
+   font-size: 3rem;
+   color: var(--clr-crimson);
+   cursor: pointer;
+}
+
+.nav-bar .divv-logo img {
+   transition: all 0.7s ease-in-out;
+}
+
+.nav-bar .ul-menu li {
+   list-style: none !important;
+   display: inline-block;
+}
+
+.nav-bar .max-width {
+   display: flex !important;
+   align-items: center !important;
+   justify-content: space-between;
+}
+
+.nav-bar .ul-menu li a:hover {
+   color: var(--clr-crimson);
+   transform-origin: left;
+   transition: color 0.3s ease;
+}
+
+.nav-bar .ul-menu li a::before {
+   content: "";
+   display: block;
+   height: 4px;
+   background: var(--clr-crimson);
+   position: absolute;
+   bottom: -0.75rem;
+   left: 0;
+   right: 0;
+   transform: scale(0, 1);
+   transform-origin: left;
+   transition: transform ease-in-out 300ms;
+}
+
+.nav-bar .ul-menu li a:hover::before {
+   transform: scale(1, 1);
+}
+
+.nav-bar.sticky {
+   background-color: hsl(0, 0%, 98%);
+   color: black !important;
+   border-bottom: 1px solid rgba(232, 232, 232, 0.1);
+   box-shadow: 1px 5px 20px -10px rgba(0, 0, 0, 1);
+}
+
+.nav-bar.sticky .ul-menu li a {
+   color: black;
+   transition: color 0.3s ease;
+}
+
+.nav-bar.sticky .ul-menu li a:hover {
+   color: var(--clr-crimson);
+}
+
+/* menu btn style */
+
+.menu-btn {
+   color: var(--clr-crimson);
+   font-size: 3rem;
+   cursor: pointer;
+   display: none;
+}
+
+.scroll-up-btn {
+   position: fixed;
+   height: 45px;
+   width: 42px;
+   background: var(--clr-crimson);
+   right: 30px;
+   bottom: 10px;
+   text-align: center;
+   line-height: 45px;
+   color: var(--clr-nav-card);
+   z-index: 9999;
+   font-size: 4rem;
+   border-radius: 6px;
+   cursor: pointer;
+   opacity: 0;
+   pointer-events: none;
+   transition: all 0.3s ease;
+}
+
+.scroll-up-btn.show {
+   opacity: 1;
+   pointer-events: auto;
+   bottom: 30px;
+}
+
+.scroll-up-btn:hover {
+   filter: brightness(90%);
+}
+
+.btn-home {
+   background-color: var(--clr-crimson);
+   border: none;
+   color: var(--clr-white);
+   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+   padding: 2rem 3rem;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 2rem;
+   margin-left: 0%;
+   cursor: pointer;
+   margin-top: 5rem;
+   justify-content: left;
+   border-radius: 10px;
+   font-weight: 600;
+   border: 4px solid linear-gradient(to top left, #df2527 0%, #a24c55 51%, #647282 100%);
+}
+
+.btn-home:hover {
+   background-color: var(--clr-crimson2);
+   transition: all ease 0.3s;
+   font-weight: 600;
+   box-shadow: 0 10px 10px -10px black;
+}
+
+/* home section */
+
+.home {
+   min-height: 75vh;
+   color: black;
+   display: flex;
+   text-align: left;
+   font-family: "Ubuntu", sans-serif;
+   background-color: var(--clr-sections);
+   background: url(./img/bg1.png);
+   height: 50px;
+   background-position: right;
+   background-repeat: no-repeat;
+   background-size: cover;
+   padding-top: 10rem;
+}
+
+.home .max-width {
+   margin: auto 0 auto 0;
+   width: 1200px;
+   margin: auto;
+}
+
+.home .div-home .text-2 {
+   color: var(--clr-nav-card);
+   font-size: 5rem;
+   font-weight: 600;
+   transform: translateX(-150%);
+}
+
+.div-home {
+   text-align: left;
+   display: flex;
+   padding-top: 1rem;
+   width: 100%;
+   height: 100%;
+   align-self: center;
+   align-items: center;
+}
+
+.home-1 {
+   text-align: left;
+   width: 65%;
+}
+
+.home-p1 {
+   font-size: 2rem;
+   padding-top: 0.8rem;
+   color: var(--clr-crimson);
+}
+
+.home-p2 {
+   font-size: 1.6rem;
+   padding-top: 0.8rem;
+}
+
+.home-2 {
+   display: flex;
+   width: 35%;
+   align-items: center;
+   align-content: flex-end;
+}
+
+.home-2 img {
+   width: 100%;
+}
+.div-home i span {
+   font-size: 2rem;
+   color: var(--clr-nav-card);
+   font-family: "Ubuntu", sans-serif;
+   font-weight: 500;
+}
+.div-home .text-2 {
+   padding-bottom: 1.5rem;
+}
+
+.div-home2 {
+   padding-top: 8rem;
+}
+
+.hide {
+   overflow: hidden;
+}
+
+.hide .text {
+   transform: translateY(100%);
+   display: inline-block;
+}
+
+/* douleies section */
+
+.jobs {
+   min-height: 60vh;
+   color: var(--clr-white);
+   display: flex;
+   background-repeat: no-repeat;
+}
+section .title::before {
+   content: "";
+   position: absolute;
+   bottom: 0px;
+   left: 50%;
+   width: 150px;
+   height: 3px;
+   background: var(--clr-crimson);
+   transform: translateX(-50%);
+}
+
+.jobs .max-width {
+   width: 1200px;
+   border-top: 1px solid rgba(232, 232, 232, 0.5);
+}
+
+.jobs .max-width .title {
+   color: var(--clr-nav-card);
+   padding-top: 4rem;
+}
+
+.jobs .job-content {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: space-between;
+
+   backdrop-filter: blur(5px);
+}
+
+.jobs .job-content .card {
+   width: calc(50% - 5rem);
+   text-align: center;
+   transition: all 0.4s ease-in-out;
+}
+
+.card {
+   font-size: 3rem;
+   background-color: rgba(110, 87, 224, 1) !important;
+   padding: 2rem;
+   color: var(--clr-white);
+   border-radius: 10px;
+   padding: 3rem 4rem;
+   min-height: 558px !important;
+   margin: 2rem;
+   transition: 0.3s ease;
+   cursor: pointer;
+   font-family: "Ubuntu", sans-serif;
+   z-index: 10;
+}
+
+.card .box i {
+   font-size: 3rem;
+   transition: all 0.3s ease;
+}
+
+.card .box p {
+   font-size: 2rem;
+   margin: 1rem 0;
+   word-spacing: 0.27em;
+}
+
+.card .box .skills-li {
+   font-size: 2.5rem !important;
+   text-decoration: none;
+   text-align: center;
+   padding-top: 0.7rem;
+}
+
+.white {
+   background-color: white;
+   border-radius: 10px;
+   width: 100%;
+   margin-top: 0.5rem;
+}
+
+.test1 {
+   font-size: 2.5rem !important;
+}
+
+.blue {
+   background-color: rgba(110, 87, 224, 0.5);
+   border-radius: 10px;
+   font-size: 18px;
+   text-align: left;
+   padding-left: 8px;
+}
+.jobs .job-content .card:hover {
+   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.jobs .title {
+   color: var(--clr-white);
+}
+
+.jobs .title::before {
+   color: #fff;
+}
+
+.jobs .title::after {
+   color: #fff;
+}
+
+/* project section */
+
+.projects {
+   padding-top: 4rem;
+   padding-bottom: 0rem;
+   background-repeat: no-repeat;
+   font-family: "Ubuntu", sans-serif;
+
+   background-repeat: no-repeat;
+   background-size: cover;
+   padding-bottom: 4rem;
+}
+
+.projects .max-width {
+   width: 1200px;
+   border-top: 1px solid rgba(232, 232, 232, 0.5);
+}
+
+.projects .carousel .card {
+   background: var(--clr-nav-card);
+   border-radius: 10px;
+   padding: 25px 35px;
+   text-align: center;
+   overflow: hidden;
+   transition: all 0.3s ease;
+   min-height: 200px;
+   transition: all 0.4s ease-in-out;
+   font-family: "Ubuntu", sans-serif;
+}
+
+.projects .carousel .card:hover {
+   background: var(--clr-crimson);
+   transform: scale(1.01);
+   box-shadow: 0 10px 10px -10px black;
+   transition: all 0.4s ease-in-out;
+}
+
+.projects .carousel .card .box {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   transition: all 0.3s ease;
+}
+
+.projects .carousel .card .text {
+   font-size: 25px;
+   font-weight: 500;
+   margin: 10px 0 7px 0;
+}
+
+.projects .carousel .card img {
+   height: 200px;
+   width: 300px;
+   object-fit: cover;
+   border-radius: 12px;
+   border: 5px solid var(--clr-crimson);
+   transition: all 0.3s ease;
+}
+
+.projects .carousel .card:hover img {
+   border-color: #fff;
+   transition: all 0.4s ease-in-out;
+}
+
+.owl-dots {
+   text-align: center;
+   margin-top: 20px;
+}
+
+.owl-dot {
+   height: 13px;
+   width: 13px;
+   margin: 0 5px;
+   outline: none !important;
+   border-radius: 50%;
+   border: 2px solid var(--clr-crimson) !important;
+   transition: all 0.3s ease;
+}
+
+.owl-dot.active {
+   width: 35px;
+   border-radius: 14px;
+}
+
+.owl-dot.active,
+.owl-dot:hover {
+   background: var(--clr-crimson) !important;
+}
+
+.projects .title {
+   padding-top: 4rem;
+}
+
+.visit-site {
+   color: white;
+   font-size: 2.5rem;
+   padding: 1rem 2rem;
+   margin-top: 2.5rem;
+   border: 2px solid white;
+   border-radius: 12px;
+}
+
+/* contact section */
+
+.contact {
+   color: var(--clr-nav-card);
+   display: flex;
+   padding-bottom: 6rem;
+   padding-top: 2rem;
+   font-family: "Ubuntu", sans-serif;
+}
+
+.contact .max-width {
+   padding-top: 2rem;
+}
+
+.contact-section-container {
+   display: flex;
+   justify-content: center;
+}
+
+.contact .max-width {
+   width: 1200px;
+   border-top: 1px solid rgba(232, 232, 232, 0.5);
+}
+
+.contact .max-width .title {
+   padding-top: 4rem;
+}
+
+.contact-section-box {
+   position: relative;
+   margin: auto;
+}
+
+.contact-section-box i {
+   font-size: 2rem;
+   padding: 2rem 0;
+   color: var(--clr-crimson);
+}
+
+.contact-section-box i a span {
+   text-decoration: none;
+   font-size: 2.5rem;
+   padding: 2rem 0;
+   color: black;
+   padding-left: 2rem;
+   font-size: 2.5rem;
+   font-family: "Ubuntu", sans-serif;
+}
+
+.contact-section-box i span {
+   color: black;
+   padding-left: 2rem;
+   font-size: 2.5rem;
+}
+
+.fa-map-marker {
+   font-weight: 700;
+   font-family: "Ubuntu", sans-serif;
+}
+.fa-map-marker span {
+   font-family: "Ubuntu", sans-serif;
+}
+
+/* footer */
+
+footer {
+   min-height: 10vh;
+   background: var(--clr-crimson);
+   align-items: center;
+   color: var(--clr-white);
+   font-size: 2rem;
+   text-align: center;
+   padding: 1rem;
+
+   font-family: "Ubuntu", sans-serif;
+   bottom: 0;
+}
+
+.footer-top {
+   display: flex !important;
+   width: 100%;
+   justify-content: space-between;
+   align-items: center;
+   padding-bottom: 8rem;
+}
+
+.a-footer .fab {
+   size: 2rem;
+   color: white;
+   padding-left: 1rem;
+}
+
+.div-logo {
+   transition: all 0.3s ease;
+}
+
+/* responsive gia ola*/
+
+@media (max-width: 1300px) {
+   .jobs .job-content .card {
+      width: calc(48% - 3.5rem);
+      height: 180px;
+   }
+
+   .card {
+      max-height: 400px;
+   }
+
+   .el-net2 .max-width .title2 {
+      position: relative;
+      padding-top: 4rem;
+      margin-top: 4rem;
+      font-size: 4.5rem;
+      font-weight: 500;
+      padding-bottom: 2rem;
+      font-family: "Ubuntu", sans-serif;
+      color: var(--clr-nav-card);
+   }
+
+   .el-net2 .max-width .i2:hover {
+      filter: brightness(90%);
+   }
+
+   .el-net2 .max-width .i2 {
+      cursor: pointer;
+   }
+
+   .el-net2 {
+      padding-bottom: 2rem;
+      padding-top: 2rem;
+      position: absolute;
+      top: 50%;
+
+      transform: translateY(-50%);
+      margin-left: 9%;
+   }
+
+   .el-net2 .max-width i {
+      font-size: 2rem;
+      color: var(--clr-crimson);
+   }
+
+   .el-net2 .max-width .title2 i {
+      font-size: 3rem;
+      color: var(--clr-crimson);
+   }
+
+   .el-net2 .max-width i span {
+      font-size: 2rem;
+      margin-left: 1rem;
+      color: black;
+      padding: 0 0.5rem;
+   }
+   .yphr-main-container {
+      width: 90%;
+   }
+
+   .yphr-sub-card {
+      flex-direction: column !important;
+   }
+   .yphr-main-container {
+      flex-direction: column !important;
+   }
+   .yphr-sub-container .yphr-sub-card .yphr-imgBx {
+      max-width: 600px;
+      flex: 0 0 450px;
+   }
+
+   .yphr-content {
+      max-width: 600px;
+   }
+
+   .left,
+   .right {
+      padding-left: 0;
+      padding-bottom: 2rem;
+   }
+
+   .yphr-content h2 {
+      padding-top: 2rem;
+      font-size: 4rem;
+      font-family: "Ubuntu", sans-serif;
+   }
+   .yphr-content p {
+      padding-top: 2rem;
+      font-size: 2rem;
+      font-family: "Ubuntu", sans-serif;
+   }
+
+   .carousel {
+      width: 90%;
+   }
+
+   .gallery {
+      width: 90%;
+   }
+}
+
+@media (max-width: 1299px) {
+   /*.jobs .job-content .card {
+        width: calc(50% - 2rem);
+        margin-bottom: 3rem;
+    }*/
+   .nav-bar {
+      width: 100%;
+      z-index: 999;
+      transition: all 0.3s ease;
+      background-color: hsl(0, 0%, 98%);
+      box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 1);
+   }
+
+   .max-width {
+      padding: 3rem 0rem !important;
+      margin: auto;
+      max-width: 90%;
+   }
+
+   .menu-btn {
+      display: block;
+      z-index: 999;
+      font-size: 4.5rem;
+   }
+
+   .nav-bar .ul-menu {
+      position: fixed;
+      height: 100vh;
+      width: 100%;
+      left: -100%;
+      top: 0;
+      background: hsl(225, 92%, 96%);
+      text-align: center;
+      padding-top: 25rem;
+      transition: all 0.3s ease;
+   }
+
+   .divv-logo {
+      width: 35%;
+   }
+   .divv-logo img {
+      width: 18%;
+      padding: 0;
+   }
+
+   .menu-btn i.active:before {
+      content: "\f00d";
+   }
+
+   .nav-bar .ul-menu.active {
+      left: 0;
+   }
+
+   .nav-bar .ul-menu li {
+      display: flex;
+      justify-content: center;
+   }
+
+   .nav-bar .ul-menu li a {
+      display: block;
+      font-size: 4.5rem;
+      padding: 3rem 0;
+      color: var(--clr-crimson) !important;
+      margin-left: auto;
+      margin-right: auto;
+   }
+
+   .projects .card {
+      min-height: 640px !important;
+   }
+}
+
+@media (max-width: 1120px) {
+   .carousel-cell {
+      width: 60%;
+   }
+
+   .carousel-cell .w3-image {
+      width: 45%;
+   }
+
+   .carousel-cell .w3-image {
+      width: 70%;
+   }
+
+   .photos {
+      min-height: 120vh;
+      padding-top: 0;
+   }
+   .gallery-title {
+      padding-top: 10rem;
+   }
+
+   .projects .card {
+      min-height: 670px !important;
+   }
+}
+
+@media (max-width: 1000px) {
+   html {
+      font-size: 50% !important;
+   }
+
+   .jobs .job-content .card {
+      height: 150px;
+   }
+
+   .jobs .job-content .card .box .text {
+      font-size: 2.5rem;
+      font-weight: 600;
+   }
+   .jobs .job-content .card .box p {
+      font-size: 2rem;
+   }
+
+   .card {
+      min-height: 500px !important;
+   }
+   .projects .carousel .card {
+      min-height: 360px;
+   }
+   .projects .carousel .card .text {
+      font-size: 3.5rem;
+   }
+   .projects .carousel .card p {
+      font-size: 2.2rem;
+   }
+}
+
+@media (max-width: 890px) {
+   .home {
+      padding-top: 8rem;
+   }
+
+   .jobs .job-content .card {
+      width: calc(100% - 3rem);
+      margin-bottom: 3rem;
+      justify-self: center;
+      height: 130px;
+   }
+
+   .carousel-cell .w3-image {
+      width: 55%;
+   }
+   .jobs .card {
+      min-height: 450px !important;
+   }
+
+   .projects .card {
+      min-height: 550px !important;
+   }
+
+   .carousel-cell .w3-image {
+      width: 85%;
+   }
+}
+
+@media (max-width: 850px) {
+   .contact-section-box {
+      padding: 0 2rem;
+   }
+
+   .contact .max-width {
+      width: 85%;
+   }
+}
+@media (max-width: 768px) {
+   .home {
+      height: 100vh;
+
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      padding-top: 5rem;
+   }
+
+   .projects {
+      background-repeat: no-repeat;
+      background-size: cover;
+   }
+
+   .div-home {
+      display: block;
+      padding-top: 10rem;
+   }
+
+   .home-1 {
+      text-align: center;
+      width: 100%;
+      display: block;
+      align-items: center;
+      justify-content: center;
+   }
+
+   .home-1 .hide {
+      width: 200px;
+      display: flex;
+      margin: auto;
+   }
+
+   .home-2 {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      align-content: center;
+      padding-top: 2rem;
+      text-align: center;
+   }
+   .home-2 img {
+      display: flex;
+      width: 85%;
+      margin: auto;
+   }
+
+   .yphresies-sub-tittle {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      padding-top: 17rem;
+   }
+
+   .yphr-sub-container .yphr-sub-card .yphr-imgBx {
+      flex: 0 0 250px;
+   }
+
+   .yphr-content h2::before {
+      content: "";
+      display: block;
+      height: 4px;
+      background: var(--clr-crimson);
+      position: absolute;
+      bottom: -1.5rem;
+      left: 0;
+      right: 0;
+      width: 100px;
+      text-align: left;
+   }
+
+   .yphr-content p {
+      font-size: 2.5rem;
+      padding-top: 4rem;
+      text-align: left;
+   }
+   .is-right {
+      flex-direction: column-reverse;
+   }
+
+   .carousel-cell .w3-image {
+      width: 90%;
+   }
+
+   .flickity-page-dots {
+      padding-top: 2rem;
+   }
+}
+
+@media (max-width: 750px) {
+   /* .gallery {
+      min-height: 250vh;
+   } */
+}
+
+@media (max-width: 700px) {
+   html {
+      font-size: 50%;
+   }
+}
+
+@media (max-width: 550px) {
+   .nav-bar .ul-menu li a {
+      font-size: 4rem;
+   }
+
+   .bg-div1 .max-width .div-home {
+      margin-top: 12rem;
+      margin-left: 2.5rem;
+      max-width: 90%;
+   }
+
+   .bg-div2 .max-width,
+   .div-home2 {
+      margin-top: 8rem;
+   }
+
+   .home {
+      padding-top: 0rem;
+   }
+
+   .jobs .job-content .card {
+      width: calc(100% - 3rem);
+      margin-bottom: 3rem;
+      justify-self: center;
+      height: 110px;
+   }
+
+   .home-2 img {
+      width: 90%;
+   }
+
+   .nav-bar .ul-menu li a {
+      display: inline-block;
+      margin: 1.5rem !important;
+      font-size: 2.8rem !important;
+   }
+
+   .contact-section-container {
+      display: block;
+      text-align: center;
+      justify-content: center;
+   }
+   .contact-section-box {
+      margin: auto;
+   }
+
+   .photos {
+      min-height: 125vh;
+      padding-top: 6rem;
+   }
+
+   .projects .card {
+      min-height: 470px !important;
+   }
+}
+
+@media (max-width: 420px) {
+   html {
+      font-size: 42.5% !important;
+   }
+
+   .w3-center {
+      font-family: "Ubuntu", sans-serif;
+      margin-top: 20rem;
+   }
+}
+
+@media (max-width: 375px) {
+   .home-1 {
+      padding-top: 10rem;
+   }
+}
