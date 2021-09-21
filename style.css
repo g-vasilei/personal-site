@@ -1,10 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&family=Ubuntu:wght@400;500;700&display=swap");
 
-/* color: rgba(189, 189, 189, 1); 
-   background-color#fcfcfc;
-   #A6A6A6 65%
-*/
-
 :root {
    --clr-crimson: #6e57e0;
    --clr-crimson2: #573ddb;
@@ -47,7 +42,9 @@ a {
    text-decoration: none !important;
 }
 
-/* custom scroll bar */
+/*===================
+Custom Scroll bar
+===================*/
 
 ::-webkit-scrollbar {
    width: 10px;
@@ -85,7 +82,9 @@ section .title {
    margin: auto;
 }
 
-/* logo */
+/*===================
+Logo
+===================*/
 
 .divv-logo {
    width: 35%;
@@ -95,7 +94,9 @@ section .title {
    padding: 0;
 }
 
-/* nav-style */
+/*===================
+Nav-bar
+===================*/
 
 .nav-bar {
    font-family: "Ubuntu", sans-serif;
@@ -179,40 +180,15 @@ section .title {
 
 /* menu btn style */
 
+/*===================
+Menu btn style
+===================*/
+
 .menu-btn {
    color: var(--clr-crimson);
    font-size: 3rem;
    cursor: pointer;
    display: none;
-}
-
-.scroll-up-btn {
-   position: fixed;
-   height: 45px;
-   width: 42px;
-   background: var(--clr-crimson);
-   right: 30px;
-   bottom: 10px;
-   text-align: center;
-   line-height: 45px;
-   color: var(--clr-nav-card);
-   z-index: 9999;
-   font-size: 4rem;
-   border-radius: 6px;
-   cursor: pointer;
-   opacity: 0;
-   pointer-events: none;
-   transition: all 0.3s ease;
-}
-
-.scroll-up-btn.show {
-   opacity: 1;
-   pointer-events: auto;
-   bottom: 30px;
-}
-
-.scroll-up-btn:hover {
-   filter: brightness(90%);
 }
 
 .btn-home {
@@ -241,7 +217,9 @@ section .title {
    box-shadow: 0 10px 10px -10px black;
 }
 
-/* home section */
+/*===================
+Home section
+===================*/
 
 .home {
    min-height: 75vh;
@@ -330,7 +308,9 @@ section .title {
    display: inline-block;
 }
 
-/* douleies section */
+/*===================
+Skills section
+===================*/
 
 .jobs {
    min-height: 60vh;
@@ -441,7 +421,9 @@ section .title::before {
    color: #fff;
 }
 
-/* project section */
+/*===================
+Portfolio section
+===================*/
 
 .projects {
    padding-top: 4rem;
@@ -628,6 +610,13 @@ footer {
    justify-content: space-between;
    align-items: center;
    padding-bottom: 8rem;
+   font-family: "Satisfy", cursive;
+}
+
+.created-by {
+   font-family: "Ubuntu", sans-serif;
+   text-align: left;
+   color: rgba(255, 255, 255, 0.7);
 }
 
 .a-footer .fab {
@@ -638,6 +627,10 @@ footer {
 
 .div-logo {
    transition: all 0.3s ease;
+}
+
+.footer-bottom {
+   color: rgba(255, 255, 255, 0.5);
 }
 
 /* responsive gia ola*/
